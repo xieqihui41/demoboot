@@ -19,6 +19,6 @@ public class DemoApplication implements ApplicationRunner{
 	 */
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		System.out.print("boot start succssed");
+		System.out.println("boot start succssed");
 	}
 }

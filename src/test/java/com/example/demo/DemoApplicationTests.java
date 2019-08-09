@@ -20,7 +20,6 @@ public class DemoApplicationTests {
 	public void contextLoads() {
 		int resoult = value1+value2;
 		System.out.println(resoult);
-		assertTrue(resoult == 6);
-	}
-
+		assertFalse(resoult==1);
+}
 }
