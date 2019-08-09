@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.ChapterDao">
+  <resultMap id="Chapter" type="com.example.demo.bean.ChapterBean">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="book_id" jdbcType="BIGINT" property="bookId" />
+    <result column="chapter_no" jdbcType="VARCHAR" property="chapterNo" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="md5" jdbcType="VARCHAR" property="md5" />
+    <result column="next_func_no" jdbcType="INTEGER" property="nextFuncNo" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+  </resultMap>
+  <select id="selectChapter" parameterType="int" resultMap="Chapter">
+        select *
+        from tb_chapter b
+        where  b.book_id = #{id} 
+        limit 1
+    </select>
+  </mapper>
