@@ -1,12 +1,20 @@
 spring.jmx.default-domain: demoboot
 spring.application.name: demoboot
+
+spring.mvc.view:
+#返回的前缀   目录对应src/main/resources/static下
+  prefix: /
+#返回的后缀
+  suffix: .html
+
 server:
    servlet.context-path: /demoboot
    tomcat.uri-encoding: UTF-8
+   port: 8888
 spring:
    jackson:
       #日期格式化
-      date-format: yyyy-MM-dd HH:mm:ss
+      date-format: yyyy-MM-dd HH:mm:ss    
       serialization:
          #格式化输出
          INDENT_OUTPUT: true
