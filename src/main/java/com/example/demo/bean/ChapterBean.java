@@ -4,8 +4,6 @@
  */
 package com.example.demo.bean;
 
-import java.util.List;
-
 /**
  * Descriptions
  *
